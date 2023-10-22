@@ -3,7 +3,7 @@ import json
 with open("body.json", "r", encoding="utf-8") as infile:
     pocet_bodu = json.load(infile)
 
-prospech = []
+prospech = {}
 
 for student in pocet_bodu:
     if pocet_bodu[student] >= 60:
