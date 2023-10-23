@@ -10,7 +10,7 @@ def telCislo(cislo):
 #Druhá funkce spočte cenu zprávy. Uživatel platí 3 Kč za každých započatých 180 znaků.
     
 
-def cena_zpravy(zprava):
+def cenaZpravy(zprava):
     delka_zpravy = len(zprava)
     cena = (delka_zpravy // 180 + 1) * 3  
     
