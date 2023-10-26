@@ -1,3 +1,20 @@
+# Zeptej se uživatele na číslo a ověř jeho formát
+while True:
+    telCislo = input("Zadejte cislo prijemce: ")
+    if telCislo.isdigit() and len(telCislo) == 9:
+        break
+    else:
+        print("Zadejte platny format telefonniho cisla.")
+
+zprava = input("Obsah zpravy ")
+
+delka_zpravy = len(zprava)
+cena_zpravy = delka_zpravy * 3
+
+# Vypiš cenu zprávy
+print(f"Cena zpravy je {cena_zpravy} Kč.")
+
+
 #První funkce ověří telefonní číslo. Uvažuj, že telefonní číslo může být devítimístné nebo třináctimístné (pokud je na začátku předvolba "+420"). 
 #Funkce ověří, jestli je číslo platné. Pokud je platné, vrátí hodnotu True, jinak vrátí hodnotu False
 
@@ -9,10 +26,9 @@ def telCislo(cislo):
     
 #Druhá funkce spočte cenu zprávy. Uživatel platí 3 Kč za každých započatých 180 znaků.
     
-
 def cenaZpravy(zprava):
-    delka_zpravy = len(zprava)
-    cena = (delka_zpravy // 180 + 1) * 3  
-    
+    if len(zprava) % 180 == 0:
+        cena = (len(zprava) // 180 * 3)
+    else:
+        cena = ((len(zprava) // 180) + 1) * 3
     return cena
-
