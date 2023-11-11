@@ -33,3 +33,8 @@ nocni_teplota = [den[3] for den in teploty]
 # poledni a nocni
 
 poledni_a_nocni = [den [1] for den in teploty + den [3] for den in teploty]
+
+#komentar M.Jurosz
+# posledni cast ukolu nefunguje, zkus kdyz tak nahradit kodem co je nize
+#poledni_a_nocni_teploty = [[den[1], den[3]] for den in teploty]
+#print(poledni_a_nocni_teploty)
